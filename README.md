@@ -5,7 +5,7 @@ Simple and free text-to-speech client for live streamers with over 1400 voices ~
 -----------------------------
 
 
-Go to the releases tab, download the latest "donoduck.zip" from the assets list, and unzip it. You can make a shortcut if you want to put it on your desktop or whatever.
+Go to the releases tab, download the latest "Donoduck.zip" from the assets list, and unzip it. You can make a shortcut if you want to put it on your desktop or whatever.
 
 Donors can choose which voice their message will play with by putting "!voicenamehere: " at the beginning of their message.
 
