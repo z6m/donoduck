@@ -1,5 +1,5 @@
 # Donoduck
-Simple and free text-to-speech client for live streamers powered by Uberduck.
+Simple and free text-to-speech client for live streamers ~~with voices I stole from~~ powered by Uberduck.
 
 
 -----------------------------
