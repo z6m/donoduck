@@ -7,7 +7,9 @@ Simple and free text-to-speech client for live streamers powered by Uberduck.
 
 Go to the releases tab on the right, download the latest "donoduck.zip" from the assets list, and unzip it. You can right click the executable and make a shortcut if you want to put it on your desktop or whatever. Just don't move the executable itself from the folder. Ducks get mad when you take them from their pond.
 
-"Voices.txt" contains the list of voices the program will draw from. Right now it just picks one at random but in the future I'll add some trigger that will let a donor choose the voice if it exists. The full list of possible voices can be found here.
+Donors can choose which voice their message will play with by putting "!voicenamehere: " at the beginning of their message.
+
+"Voices.txt" contains the list of voices the program will default to at random if a voice isn't chosen. If the voice file is deleted or moved, the program will automatically generate a new one containing all 1400+ options. The full list of possible voices can be found here or in the duckvoices.py file. 
 
     https://uberduck.ai/quack-help
     
