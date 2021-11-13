@@ -14,7 +14,7 @@ Run the executable and let it sit in the background while you stream so that it 
     link coming soon™
     
 
-"Voices.txt" contains the list of voices the program will default to at random if a voice isn't chosen. If no voice file exists in the current directory, the program will automatically generate a new one containing all 1400+ options. The full list of possible voices can be found here or in duckvoices.py:
+"Voices.txt" contains the voice(s) the program will default to if a voice isn't chosen (will pick at random if list contains multiple entries). If no voice file exists in the current directory, the program will automatically generate a new one containing all 1400+ options. The full list of possible voices can be found here or in duckvoices.py:
 
     https://uberduck.ai/quack-help
     
