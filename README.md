@@ -7,7 +7,7 @@ Simple and free text-to-speech client for live streamers with over 1400 voices ~
 
 Go to the releases tab, download the latest "Donoduck.zip" from the assets list, and unzip it. You can make a shortcut if you want to put it on your desktop or whatever.
 
-Just run the executable let it sit in the background while you stream so that it may scream in the funny voices of your choosing whenever you convince someone to give you money. Tippers can choose which voice their message will play with by putting "!voicenamehere: " at the beginning of their message.
+Run the executable and let it sit in the background while you stream so that it may scream in the funny voices of your choosing whenever you convince someone to give you money. Tippers can choose which voice their message will play with by putting "!voicenamehere: " at the beginning of their message.
 
 "Token.txt" is your socket token that will get incoming data from Streamlabs. Get that here:
 
