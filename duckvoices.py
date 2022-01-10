@@ -1,6 +1,7 @@
 # To use custom voices, send your message in the format "!voice: message"
 # 
 # ex - !homer-simpson: doh
+# (NOTE: If you're using bits, put the cheer stuff at the end of the message)
 # 
 # If you don't it'll just default to whatever the streamer sets (random by default)
 
