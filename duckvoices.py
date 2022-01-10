@@ -3,7 +3,7 @@
 # ex - !homer-simpson: doh
 # (NOTE: If you're using bits, put the cheer stuff at the end of the message)
 # 
-# If you don't it'll just default to whatever the streamer sets (random by default)
+# If you don't it'll just fall through to whatever the streamer sets (random by default)
 
 voices = [
     "11-45-g",
