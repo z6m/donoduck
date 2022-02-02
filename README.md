@@ -25,3 +25,10 @@ Run the executable and let it sit in the background while you stream so that it 
 
     Tippers can choose which voice their message will play with by putting "!voice-name-here: message text here". 
     (NOTE: If you're having people cheer with bits, have them put the cheer stuff at the end of the message or it will mess this part up)
+
+-----------------------------
+
+# Nightbot 
+Really easy copypaste rundown for lazy people (me) to add as a command to nightbot:
+
+       !addcom !tts Donoduck is a free text-to-speech client with over 1400 voices. To have your message read in a custom voice, put !name-of-voice: at the start of your message. Full list of voices here: https://github.com/z6m/donoduck/blob/main/duckvoices.py
