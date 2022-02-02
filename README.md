@@ -4,7 +4,7 @@ Simple and free custom text-to-speech client for live streamers with over 1400 v
 
 -----------------------------
 
-
+#Setup Guide
 Go to the releases tab, download the latest "Donoduck.zip" from the assets list, and unzip it. You can make a shortcut if you want to put it on your desktop or whatever.
 
 
