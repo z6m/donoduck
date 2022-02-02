@@ -1,5 +1,5 @@
 # Donoduck
-Simple and free custom text-to-speech client for live streamers with over 1400 voices ~~that I'm stealing from~~ <em>powered by</em> Uberduck.
+Simple and free custom text-to-speech client for live streamers with over 1400 voices ~~that I'm stealing from~~ <em>powered by</em> [Uberduck](https://uberduck.ai/).
 
 
 -----------------------------
