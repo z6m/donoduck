@@ -20,10 +20,11 @@ Go to the releases tab, download the latest "Donoduck.zip" from the assets list,
 
 
 Run the executable and let it sit in the background while you stream so that it may scream in the funny voices of your choosing whenever you convince someone to give you money.
-(if you have some other TTS thing turn it off or they'll both play at once)
 
     Tippers can choose which voice their message will play with by putting "!voice-name-here: message text here". 
     (NOTE: If you're having people cheer with bits, have them put the cheer stuff at the end of the message or it will mess this part up)
+
+(If you have some other TTS thing turn it off or they'll both play at once)
 
 
 # Nightbot 
