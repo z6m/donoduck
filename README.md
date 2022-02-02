@@ -32,3 +32,11 @@ Run the executable and let it sit in the background while you stream so that it 
 Really easy copypaste rundown for lazy people (me) to add as a command to nightbot:
 
        !addcom !tts Donoduck is a free text-to-speech client with over 1400 voices. To have your message read in a custom voice, put !name-of-voice: at the start of your message. Full list of voices here: https://github.com/z6m/donoduck/blob/main/duckvoices.py
+       
+-----------------------------
+
+# Compiling from source 
+If you're into that kinda thing (path to pyfiglet may vary):
+
+       pyinstaller --add-data "C:\Users\*yourusernamehere*\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pyfiglet;./pyfiglet" -i "logo.ico" -n Donoduck --onefile donoduck.py
+
