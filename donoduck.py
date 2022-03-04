@@ -17,7 +17,7 @@ if __name__ == '__main__':
     colorama.init()
 
     version_name = 'Streamlabs Beta Edition'
-    version_tag = 'B1'
+    version_tag = 'v1'
 
     s = socketio.Client()
     token_file = 'token.txt'
