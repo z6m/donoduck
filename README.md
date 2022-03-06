@@ -5,7 +5,7 @@ Simple and free custom text-to-speech client for live streamers with over 1400 v
 -----------------------------
 
 # Setup Guide
-Go to the releases tab, download the latest "Donoduck.zip" from the assets list, and unzip it. You can make a shortcut if you want to put it on your desktop or whatever.
+Go to the [releases](https://github.com/z6m/donoduck/releases) page, download the latest "Donoduck.zip" from the assets list, and unzip it. You can make a shortcut if you want to put it on your desktop or whatever.
 
 
 "Token.txt" is your socket token that will get incoming data from Streamlabs/Streamelements. Get that here:
@@ -35,7 +35,7 @@ Really easy copypaste rundown for lazy people (like me) to add as a command to n
 
 
 # Compiling from source 
-If you're into that kinda thing (path to pyfiglet may vary):
+If you're into that kinda thing (path to pyfiglet may vary and you'll need to get your own uberduck api tokens):
 
        pyinstaller --add-data "C:\Users\*yourusernamehere*\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pyfiglet;./pyfiglet" -i "logo.ico" -n Donoduck --onefile donoduck.py
 
