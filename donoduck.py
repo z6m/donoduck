@@ -1,3 +1,4 @@
+from colorama.ansi import Back
 import duckvoices
 import multiprocessing
 import os
@@ -14,9 +15,9 @@ from colorama import Fore, Style
 
 if __name__ == '__main__':
     multiprocessing.freeze_support()
-    colorama.init()
+    colorama.init(autoreset=True)
 
-    version_name = 'Streamlabs Beta Edition'
+    version_name = 'Relatively Unscuffed Alpha Edition'
     version_tag = 'v1'
 
     s = socketio.Client()
@@ -28,7 +29,7 @@ if __name__ == '__main__':
     header = pyfiglet.figlet_format('Donoduck', font='chunky')
     print(Fore.YELLOW + header + '[' + version_name + '] ' + version_tag + "\n \n"
         "(*)< Full voice list // " + Fore.WHITE + "https://github.com/z6m/donoduck/blob/main/duckvoices.py \n" + Fore.YELLOW +
-        "(*)< For custom voices // " + Fore.WHITE + "!voice-goes-here: message-goes-here \n" + Fore.RESET)
+        "(*)< Choose voice with message // " + Fore.WHITE + '"!voice-goes-here: message-goes-here" \n')
 
     # Check Version
     try:
@@ -36,9 +37,9 @@ if __name__ == '__main__':
         latest_version = response.json()["tag_name"]
         if latest_version != version_tag:
             print(Fore.RED + Style.BRIGHT + "(*)< A new version of Donoduck is out\n"
-                "(*)< Download it here: " + Style.RESET_ALL + "https://github.com/z6m/Donoduck/releases/latest\n")
+                "(*)< Download it here: " + "https://github.com/z6m/Donoduck/releases/latest\n")
     except:
-        print(Fore.RED + Style.BRIGHT + "(*)< Rate limit exceeded, skipping update check \n" + Style.RESET_ALL)
+        print(Fore.RED + Style.BRIGHT + "(*)< Rate limit exceeded, skipping update check \n")
 
     if os.path.isfile(token_file) == False or os.stat(token_file).st_size == 0:
         f = open(token_file, "w+")
@@ -87,6 +88,18 @@ if __name__ == '__main__':
         voice = random.choice(voices_list)
         return voice
 
+    def get_color(type):
+        match type:
+            case 'donation':
+                color = Back.GREEN + Style.BRIGHT
+            case 'bits':
+                color = Back.CYAN + Style.BRIGHT
+            case 'subscription':
+                color = Back.MAGENTA + Style.BRIGHT
+            case 'resub':
+                color = Back.MAGENTA + Style.BRIGHT
+        return color
+
     def play(audio):
         # Play sound in different process so playsound will let go of the file when it's done
         job = multiprocessing.Process(target=playsound.playsound, args=(audio,), kwargs={"block" : True})
@@ -96,9 +109,9 @@ if __name__ == '__main__':
         queue = 0
 
     def listen():
-        print('[*] The duck is listening...')
+        print(Fore.YELLOW + '[*] The duck is listening...')
 
-    def run(message):
+    def run(message, type):
         # Allow donator to pick voice
         if message.startswith('!') == True and ':' in message:
             message = re.search('!(.*):(.*)', message)
@@ -112,12 +125,14 @@ if __name__ == '__main__':
             message = " " + message 
 
         # Get the rest of our stuff
-        uuid = get_uuid(message, voice)
+        uuid = get_uuid(message + ".", voice)
         endpoint = get_endpoint(uuid)
         fname = get_audio(endpoint)
          # Trying to keep audio files from playing at once
+
+        color = get_color(type)
                     
-        print('[!] ' + voice + ":" + message)
+        print(color + '[!] ' + voice + ":" + message)
         play(fname)
 
         # Clean up your mess
@@ -148,9 +163,9 @@ if __name__ == '__main__':
 
     @s.on("event")
     def event(event_data):
-        if event_data["type"] == "donation" or event_data["type"] == "bits" or event_data["type"] == "subscription" and event_data["message"][0]["message"] != None:
-            print ("[$] Processing message from " + event_data["message"][0]["name"])
-            run(event_data["message"][0]["message"])
+        if event_data["type"] == "donation" or event_data["type"] == "bits" or event_data["type"] == "subscription" or event_data["type"] == "resub" and event_data["message"][0]["message"] != None:
+            print (Fore.BLACK + Style.BRIGHT + "[$] " + event_data["type"] + " from " + event_data["message"][0]["name"])
+            run(event_data["message"][0]["message"], event_data["type"])
             
 
     @s.on("disconnect")
