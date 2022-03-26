@@ -37,5 +37,5 @@ Really easy copypaste rundown for lazy people (like me) to add as a command to n
 # Compiling from source 
 If you're into that kinda thing (path to pyfiglet may vary and you'll need to get your own uberduck api tokens):
 
-       pyinstaller --add-data "C:\Users\*yourusernamehere*\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\pyfiglet;./pyfiglet" -i "logo.ico" -n Donoduck --onefile donoduck.py
+       pyinstaller --add-data "C:\Users\*****\AppData\Local\Programs\Python\Python310\Scripts;./pyfiglet" -i "logo.ico" -n Donoduck --onefile donoduck.py
 
