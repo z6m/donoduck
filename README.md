@@ -1,5 +1,5 @@
 # Donoduck
-Simple and free custom text-to-speech client for live streamers with over 1400 voices ~~that I'm stealing from~~ <em>powered by</em> [Uberduck](https://uberduck.ai/).
+Simple and free custom text-to-speech client for live streamers with over 2200 voices ~~that I'm stealing from~~ <em>powered by</em> [Uberduck](https://uberduck.ai/).
 
 
 -----------------------------
@@ -14,7 +14,7 @@ Go to the [releases](https://github.com/z6m/donoduck/releases) page, download th
     https://streamelements.com/dashboard/account/channels - (COMING SOON THIS ONE DON'T WORK YET)
     
 
-"Voices.txt" contains the voice(s) the program will default to if a voice isn't chosen (will pick at random if list contains multiple entries). If no voice file exists in the current directory, the program will automatically generate a new one containing all 1400+ options. The full list of supported voices can be found in duckvoices.py:
+"Voices.txt" contains the voice(s) the program will default to if a voice isn't chosen (will pick at random if list contains multiple entries). If no voice file exists in the current directory, the program will automatically generate a new one containing all options. Some voices are way better than others, you will probably want to customize this. The full list of supported voices can be found in duckvoices.py:
 
     https://github.com/z6m/donoduck/blob/main/duckvoices.py
 
