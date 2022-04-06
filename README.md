@@ -1,7 +1,6 @@
 # Donoduck
 Simple and free custom text-to-speech client for live streamers with over 2200 voices ~~that I'm stealing from~~ <em>powered by</em> [Uberduck](https://uberduck.ai/).
 
-
 -----------------------------
 
 # Setup Guide
@@ -42,3 +41,4 @@ If you're into that kinda thing (path to pyfiglet may vary and you'll need to ge
 
        pyinstaller --add-data "C:\Users\*****\AppData\Local\Programs\Python\Python310\Scripts;./pyfiglet" -i "logo.ico" -n Donoduck --onefile donoduck.py
 
+Right now I'm totally freeloading so there could be several seconds of lag between some alerts and them being read out. If people actually start using this I'll shell out so you can get that sweet unthrottled api access on my dime (or you can compile yourself/hit me up on twitter and I'll make you a custom build with your own premium keys if you got 'em). 
