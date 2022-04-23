@@ -78,9 +78,9 @@ if __name__ == '__main__':
             path = r.json()['path']
         return path 
 
-    def get_uuid(speech, voice):
+    def get_uuid(message, voice):
         # Send uberduck our text and the voice we want
-        data = '{"speech":"%s.","voice":"%s"}' % (speech, voice)
+        data = '{"speech":"%s.","voice":"%s"}' % (message, voice)
         r = requests.post('https://api.uberduck.ai/speak', data=data, auth=(duck_token, duck_secret))
         uuid = r.json()['uuid']
         return uuid
@@ -161,8 +161,14 @@ if __name__ == '__main__':
             voice = get_voice()
             message = " " + message 
 
+        # This fixes an occasional api error
+        try:
+            uuid = get_uuid(message, voice)
+        except:
+            run(message, type) 
+            return
+
         # Get the rest of our stuff
-        uuid = get_uuid(message + ".", voice)
         endpoint = get_endpoint(uuid)
         fname = get_audio(endpoint)
          # Trying to keep audio files from playing at once
@@ -174,6 +180,7 @@ if __name__ == '__main__':
 
         # Clean up your mess
         cleanup(fname)
+        return
 
     @s.on("connect")
     def connect():
