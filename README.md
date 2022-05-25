@@ -33,7 +33,7 @@ Run the executable and let it sit in the background while you stream so that it 
     https://pynput.readthedocs.io/en/latest/keyboard.html#pynput.keyboard.Key
 
 
-# Nightbot 
+# Nightbot Command
 Really easy copypaste rundown for lazy people (like me) to add as a command to nightbot:
 
     !addcom !tts Donoduck is a free text-to-speech client with over 2200 voices. To have your message read in a custom voice, put !name-of-voice: at the start of your message. Full list of voices here: https://github.com/z6m/donoduck/blob/main/duckvoices.py
