@@ -1,7 +1,7 @@
 # To use custom voices, send your message in the format "!voice: message"
 # 
 # ex - !homer-simpson: doh
-# (NOTE: If you're using bits, put the cheer stuff at the end of the message)
+# (NOTE: IF YOU'RE USING BITS PUT THE "CHEER100" OR WHATEVER MESSAGE AT THE END)
 # 
 # If you don't it'll just fall through to whatever the streamer sets (random by default)
 # Known issues with certain voices: https://uberduck.fandom.com/wiki/List_of_words_the_Uberduck_voices_can't_say_correctly
