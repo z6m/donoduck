@@ -14,16 +14,14 @@ Run the executable and let it sit in the background while you stream so that it 
 
     "!voice-name-here: message text here" 
 
-(NOTE: If you're having people cheer with bits, have them put the cheer stuff at the end of the message or it will mess this part up)
-(Also ff you have some other TTS thing turn it off or they'll both play at once)
+(NOTE: ff you have some other TTS thing turn it off or they'll both play at once)
+(ALSO NOTE: If there's a delay between alerts popping up and messages being played you can compensate for it by setting the [alert delay](https://streamlabs.com/dashboard#/alertbox) to like 2-5 seconds. Can't do much about that on my end for now.)
 
 # duck_cfg
 token.txt 
 > is your socket token that will get incoming data from Streamlabs/Streamelements. Get that here:
 
     https://streamlabs.com/dashboard#/settings/api-settings
-    https://streamelements.com/dashboard/account/channels - (COMING SOON THIS ONE DON'T WORK YET)
-    
 
 voices.txt
 > contains the voice(s) the program will default to if a voice isn't chosen (will pick at random if list contains multiple entries). Some voices are way better than others, you will probably want to customize this. The full list of supported voices can be found in duckvoices.py:
@@ -49,4 +47,6 @@ If you're into that kinda thing (path to pyfiglet may vary and you'll need to ge
 
     pyinstaller --add-data "C:\Users\*****\AppData\Local\Programs\Python\Python310\Scripts;./pyfiglet" -i "logo.ico" -n Donoduck --onefile donoduck.py
 
-Right now I'm totally freeloading so there could be several seconds of lag between some alerts and them being read out. If people actually start using this I'll shell out so you can get that sweet unthrottled api access on my dime (or you can compile yourself/hit me up on twitter and I'll make you a custom build with your own premium keys if you got 'em). 
+-----------------------------------------------------------
+
+OTHER NOTE: Right now I'm totally freeloading so there could be several seconds of lag between some alerts and them being read out. If people actually start using this I'll shell out so you can get that sweet unthrottled api access on my dime (or you can compile yourself/hit me up on twitter and I'll make you a custom build with your own premium keys if you got 'em).
