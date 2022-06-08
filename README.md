@@ -29,6 +29,8 @@ voices.txt
     https://github.com/z6m/donoduck/blob/main/duckvoices.py
 
 user_config.txt
+> contains everything else.
+>
 > "skip_key" is the hotkey that you can use to skip donations if voices glitch out or whatever. By default it's set to RIGHT SHIFT since it's the most useless key I can think of that most keyboards have and won't mess anything up in most programs. You can find all the aliases for the different keys here if you want to change it:
         
     https://pynput.readthedocs.io/en/latest/keyboard.html#pynput.keyboard.Key
