@@ -18,20 +18,24 @@ Run the executable and let it sit in the background while you stream so that it 
 (Also ff you have some other TTS thing turn it off or they'll both play at once)
 
 # duck_cfg
-"token.txt" is your socket token that will get incoming data from Streamlabs/Streamelements. Get that here:
+token.txt 
+> is your socket token that will get incoming data from Streamlabs/Streamelements. Get that here:
 
     https://streamlabs.com/dashboard#/settings/api-settings
     https://streamelements.com/dashboard/account/channels - (COMING SOON THIS ONE DON'T WORK YET)
     
 
-"voices.txt" contains the voice(s) the program will default to if a voice isn't chosen (will pick at random if list contains multiple entries). If no voice file exists in the current directory, the program will automatically generate a new one containing all options. Some voices are way better than others, you will probably want to customize this. The full list of supported voices can be found in duckvoices.py:
+voices.txt
+> contains the voice(s) the program will default to if a voice isn't chosen (will pick at random if list contains multiple entries). Some voices are way better than others, you will probably want to customize this. The full list of supported voices can be found in duckvoices.py:
 
     https://github.com/z6m/donoduck/blob/main/duckvoices.py
 
-"skip_key.txt" is the hotkey that you can use to skip donations if voices glitch out or whatever. By default it's set to RIGHT SHIFT since it's the most useless key I can think of that most keyboards have and won't mess anything up in most programs. You can find all the aliases for the different keys here if you want to change it:
+user_config.txt
+> "skip_key" is the hotkey that you can use to skip donations if voices glitch out or whatever. By default it's set to RIGHT SHIFT since it's the most useless key I can think of that most keyboards have and won't mess anything up in most programs. You can find all the aliases for the different keys here if you want to change it:
         
     https://pynput.readthedocs.io/en/latest/keyboard.html#pynput.keyboard.Key
 
+> "min_bits" is the minumum number of bits someone has to tip to play tts. This is just to avoid spam. It's 100 by default.
 
 # Nightbot Command
 Really easy copypaste rundown for lazy people (like me) to add as a command to nightbot:
