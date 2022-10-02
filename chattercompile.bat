@@ -1,0 +1,1 @@
+pyinstaller  --collect-all pyfiglet -i "logo.ico" -n chatterduck_new --onefile chatterduck.py

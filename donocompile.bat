@@ -1,0 +1,1 @@
+pyinstaller  --collect-all pyfiglet -i "logo.ico" -n donoduck_new --onefile donoduck.py
