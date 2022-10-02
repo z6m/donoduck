@@ -49,6 +49,8 @@ If you're into that kinda thing (path to pyfiglet may vary and you'll need to ge
 
     pyinstaller --add-data "C:\Users\*****\AppData\Local\Programs\Python\Python310\Scripts;./pyfiglet" -i "logo.ico" -n Donoduck --onefile donoduck.py
 
+*Alternatively you can just run the batch files from wherever you cloned the directory to if you find that easier than copypasting this command.
+
 -----------------------------------------------------------
 
 OTHER NOTE: Right now I'm totally freeloading so there could be several seconds of lag between some alerts and them being read out. If people actually start using this I'll shell out so you can get that sweet unthrottled api access on my dime (or you can compile yourself/hit me up on twitter and I'll make you a custom build with your own premium keys if you got 'em).
