@@ -3,18 +3,14 @@ import duckengine
 import duckvoices
 import multiprocessing
 import os
-import playsound
 import pyfiglet
-import random
 import re
 import requests
 import socketio
-import time
 import tokens
 import colorama
 from colorama import Fore, Style
 from colorama.ansi import Back
-from pynput import keyboard
 
 if __name__ == '__main__':
     multiprocessing.freeze_support()
@@ -22,7 +18,7 @@ if __name__ == '__main__':
 
     # Version info
     version_name = "Relatively Unscuffed Alpha Edition"
-    version_tag = 'v1.1.2'
+    version_tag = 'v1.1.3'
 
     # Files
     s = socketio.Client()
@@ -79,8 +75,8 @@ if __name__ == '__main__':
                 message = message.group(2)
         
         # Slice up voice from message
-        if message.startswith('!') == True and ':' in message:
-            message = re.search('!(\S*):(.*)', message)
+        if message.startswith(';') == True and ':' in message:
+            message = re.search(';(\S*):(.*)', message)
             voice = message.group(1)
             voice = voice.lower()
             message = message.group(2)
