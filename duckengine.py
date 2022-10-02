@@ -1,14 +1,15 @@
-import multiprocessing
 import os
-import playsound
 import random
 import requests
 import time
 import tokens
-import colorama
+import contextlib
+with contextlib.redirect_stdout(None):
+    import pygame
 from colorama import Fore, Style
 from colorama.ansi import Back
 from pynput import keyboard
+
 
 duck_token = tokens.duck_token
 duck_secret = tokens.duck_secret
@@ -18,6 +19,8 @@ token_file = 'token.txt'
 voice_file = 'voices.txt'
 config_file = 'user_config.txt'
 queue = 0
+pygame.init()
+pygame.mixer.init()
 
 def get_endpoint(uuid):
         path = None
@@ -67,10 +70,10 @@ def get_color(type):
     return color
 
 def play(audio, skip_key):
-    # Play message in different process so playsound will let go of the file when it's done
-    playing = multiprocessing.Process(target=playsound.playsound, args=(audio,), kwargs={"block" : True})
-    playing.start()
+    pygame.mixer.music.load(audio)
+    pygame.mixer.music.play()
 
+    # pygame probably has a way to do this but i'm feeling lazy right now so this will work
     def emergency_skip(key):
         # [8:27 PM] Doc: Lol this exact bit of code was duplicated about 3 dozen times in the repo of the company i used to be at
         def my_import(name):
@@ -79,16 +82,17 @@ def play(audio, skip_key):
             for comp in components[1:]:
                 mod = getattr(mod, comp)
             return mod
-
         if key == my_import("pynput.keyboard.Key." + skip_key):
-            playing.terminate()
+            pygame.mixer.music.stop()
 
-    # Skip button in case voice freaks out
     skipping = keyboard.Listener(on_press=emergency_skip)
     skipping.start()
 
-    playing.join()
+    # Makes sure pygame doesn't let go of the audio file too soon
+    while pygame.mixer.music.get_busy() == True:
+        continue
 
+    pygame.mixer.music.unload()
     global queue
     queue = 0
 
